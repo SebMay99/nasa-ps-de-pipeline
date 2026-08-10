@@ -1,5 +1,6 @@
 # IVOA TAP Service for NASA Exoplanet Archive
 import pyvo as vo
+import pandas as pd
 
 def fetch_raw_data():
     # Define the TAP service URL for NASA Exoplanet Archive
@@ -22,5 +23,6 @@ def fetch_raw_data():
         data = result.to_table()
         print("Fetched data successfully:")
         print(data)
+        print(type(data))
     except Exception as e:
         print(f"Error occurred while fetching data: {e}")
