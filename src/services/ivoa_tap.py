@@ -20,9 +20,8 @@ def fetch_raw_data():
     # Execute the query and fetch results
     try:
         result = tap_service.search(adql_query)
-        data = result.to_table()
+        df = result.to_table().to_pandas()
         print("Fetched data successfully:")
-        print(data)
-        print(type(data))
+        print(df)
     except Exception as e:
         print(f"Error occurred while fetching data: {e}")
