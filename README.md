@@ -9,6 +9,8 @@ Data Engineering Pipeline for NASA Exoplante Planetary System database
 - Run `python -m venv .venv`
 - Activate it `source .venv/bin/activate`
 
+## Download AWS CLI and setup credentials
+
 ## Install requirements.txt
 - Run `pip install -r requirements.txt`
 

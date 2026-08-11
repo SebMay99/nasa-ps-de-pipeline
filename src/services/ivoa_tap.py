@@ -1,7 +1,7 @@
 # IVOA TAP Service for NASA Exoplanet Archive
 import pyvo as vo
 
-def fetch_raw_data(tap_service_url: str) -> DataFrame:
+def fetch_raw_data(tap_service_url: str):
     # Define the TAP service URL for NASA Exoplanet Archive
 
     # Create a TAP service object
