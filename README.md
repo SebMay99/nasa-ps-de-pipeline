@@ -3,16 +3,26 @@ Data Engineering Pipeline for NASA Exoplante Planetary System database
 
 # Requirements
 - PyVO required for NASA DB Table Access Protocol (TAP)
+- Boto3
+- Pandas
 
 # Setup
 ## Create a virtual enviroment
 - Run `python -m venv .venv`
 - Activate it `source .venv/bin/activate`
 
-## Download AWS CLI and setup credentials
-
 ## Install requirements.txt
 - Run `pip install -r requirements.txt`
+
+## Setup AWS S3 bucket and required permissions
+
+## Generate an access key
+
+## Download AWS CLI and setup credentials
+
+# How to run
+## Step 1. Run main.py to download the NASA Explanet Planetary System db through TAP. Then, the script will upload the db to an AWS S3 bucket.
+
 
 # References:
 - Retrieving Exoplanet Archive Data With Table Access Protocol https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html
