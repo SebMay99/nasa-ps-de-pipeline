@@ -16,6 +16,7 @@ def fetch_raw_data(tap_service_url: str):
 
     # Execute the query and fetch results
     try:
+        print("Fetching data from NASA Exoplanet Archive...")
         result = tap_service.search(adql_query)
         df = result.to_table().to_pandas()
         print("Fetched data successfully:")

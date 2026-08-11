@@ -14,8 +14,13 @@ def load_pandas_to_s3(client,df, bucket_name, file_name):
     Returns:
     None
     """
-    # Convert DataFrame to CSV
-    csv_buffer = df.to_csv(index=False)
+    try:
+        # Convert DataFrame to CSV
+        csv_buffer = df.to_csv(index=False)
 
-    # Upload CSV to S3
-    client.put_object(Bucket=bucket_name, Key=file_name, Body=csv_buffer)  
+        # Upload CSV to S3
+        client.put_object(Bucket=bucket_name, Key=file_name, Body=csv_buffer)  
+
+        print(f"DataFrame uploaded to S3 bucket '{bucket_name}' as '{file_name}' successfully.")
+    except Exception as e:
+        print(f"Error occurred while uploading to S3: {e}")

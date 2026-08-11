@@ -14,5 +14,7 @@ if __name__ == "__main__":
         # Load the raw data to the S3 bucket
         load_pandas_to_s3(client, raw_data, "s-nasa-exoplanet", "raw_data.csv")
 
+        
+
     except Exception as e:
         print(f"Error occurred: {e}")
