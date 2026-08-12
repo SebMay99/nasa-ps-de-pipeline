@@ -19,7 +19,7 @@ def fetch_raw_data(tap_service_url: str):
         print("Fetching data from NASA Exoplanet Archive...")
         result = tap_service.search(adql_query)
         df = result.to_table().to_pandas()
-        print("Fetched data successfully:")
+        print("Fetched data successfully.")
         return df
     except Exception as e:
         print(f"Error occurred while fetching data: {e}")
